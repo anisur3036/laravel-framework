@@ -1,0 +1,1 @@
+* Laravel Version 6.9.0
