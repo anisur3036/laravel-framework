@@ -3,6 +3,7 @@
 namespace App\Exceptions;
 
 use Exception;
+use Illuminate\Database\Eloquent\ModelNotFoundException;
 use Illuminate\Foundation\Exceptions\Handler as ExceptionHandler;
 
 class Handler extends ExceptionHandler
@@ -46,6 +47,10 @@ class Handler extends ExceptionHandler
      */
     public function render($request, Exception $exception)
     {
+        if ($exception instanceof ModelNotFoundException ) {
+            $modelName = strtolower(class_basename($exception->getModel()));
+            return response()->json(["error" => "Does not exists any {$modelName} with the specified identificator", "code" => 404], 404);
+        }
         return parent::render($request, $exception);
     }
 }
