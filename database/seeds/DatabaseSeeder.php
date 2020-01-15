@@ -25,13 +25,13 @@ class DatabaseSeeder extends Seeder
     	CategoryProduct::truncate();
 
 
-    	factory(User::class, 200)->create();
+    	factory(User::class, 500)->create();
     	factory(Category::class, 30)->create();
     	factory(Product::class, 1000)->create()->each(function($product) {
     		$categories = Category::all()->random(mt_rand(1, 5))->pluck('id');
     		$product->categories()->attach($categories);
     	});
-    	factory(Transaction::class, 1000)->create();
+    	factory(Transaction::class, 500)->create();
 
 
         // $this->call(UsersTableSeeder::class);
