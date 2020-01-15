@@ -4,6 +4,7 @@ namespace App;
 
 use App\Product;
 use App\Scopes\SellerScope;
+use Illuminate\Database\Eloquent\SoftDeletes;
 
 
 class Seller extends User
