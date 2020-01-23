@@ -1,0 +1,17 @@
+### buyer/1/transcation
+GET http://api-laravel.test:8080/api/buyers/4/transactions
+
+### buyers/1/products
+GET http://api-laravel.test:8080/api/buyers/8/products
+
+### categories/1/products
+GET http://api-laravel.test:8080/api/categories/2/products
+
+### categories/1/sellers
+GET http://api-laravel.test:8080/api/categories/42/sellers
+
+### categories/1/transactions
+GET http://api-laravel.test:8080/api/categories/2/transactions
+
+### categories/1/buyers
+GET http://api-laravel.test:8080/api/categories/2/buyers
