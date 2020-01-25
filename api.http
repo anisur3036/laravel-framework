@@ -15,3 +15,16 @@ GET http://api-laravel.test:8080/api/categories/2/transactions
 
 ### categories/1/buyers
 GET http://api-laravel.test:8080/api/categories/2/buyers
+
+### sellers/1/categories
+GET http://api-laravel.test:8080/api/sellers/2/categories
+
+### sellers/1/buyers
+GET http://api-laravel.test:8080/api/sellers/2/buyers
+
+### sellers/1/products
+GET http://api-laravel.test:8080/api/sellers/1513/products
+
+###sellers/2/products
+POST http://api-laravel.test:8080/api/sellers/3/products
+Content-Type: application/json
